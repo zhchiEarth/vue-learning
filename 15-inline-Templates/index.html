@@ -17,10 +17,13 @@
 <body>
 
     <div id="root" class="container">
+        <progress-view inline-template>
+            <div>
+            <h1>Your progress-view {{ completionRate }}%</h1>
 
-        <coupon @applied="onCouponApplied"></coupon>
-
-        <h1 v-if="couponApplied"> Youe used a coupon!</h1>
+            <p><button @click="completionRate += 10">Update Complate Rate</button></p>
+            </div>
+        </progress-view>
     </div>
 
 
